@@ -1,0 +1,4 @@
+nano Dockerfile
+nano my.sh
+
+docker build .
