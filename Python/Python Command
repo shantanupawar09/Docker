@@ -1,0 +1,6 @@
+# nano Dockerfile
+# nano requirements.txt	
+# nano app.py															
+
+# docker build -t {name of new image} .      						
+# docker run -d -p80:5000 {image name/ID}
