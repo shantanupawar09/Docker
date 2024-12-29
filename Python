@@ -1,0 +1,37 @@
+# nano Dockerfile
+		FROM python:3.9-slim
+		WORKDIR /app
+		COPY requirements.txt /app/
+		RUN pip install -r requirements.txt
+		COPY . /app/
+		EXPOSE 5000
+		CMD ["python","app.py"]
+
+# nano requirements.txt	
+    click==8.0.3
+    colorama==0.4.4
+    Flask==2.0.2
+    itsdangerous==2.0.1
+    Jinja2==3.0.3
+    MarkupSafe==2.0.1
+    Werkzeug==2.0.2
+    gunicorn==20.1.0
+
+# nano app.py															
+    from flask import Flask
+    import os
+    app = Flask(_name_)
+     
+    @app.route('/')
+    def hello_geek():
+        return '<h1>Hello from Docker</h1>'
+    @app.route('/hi')
+    def hell():
+        return '<h1>Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii from Flask & Docker</h1>'
+     
+    if _name_ == "_main_":
+        port = int(os.environ.get('PORT', 5000))
+        app.run(debug=True, host='0.0.0.0', port=port)
+
+# docker build -t {name of new image} .      						
+# docker run -d -p80:5000 {image name/ID}
