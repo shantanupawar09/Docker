@@ -1,0 +1,5 @@
+curl -SL https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose                        : To download docker compose
+chmod +x /usr/local/bin/docker-compose                                                                                                                   : To give execute permission to docker-compose file
+
+nano filename.yml
+docker-compose -f file.yml up                                                                                                                            : To starts your Docker application and all services in the YAML file      : 
