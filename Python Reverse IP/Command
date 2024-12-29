@@ -1,0 +1,14 @@
+nano Dockerfile
+nano requirements.txt
+nano app.py
+
+docker build -t {name of new image} .
+docker network create {name of network}
+docker run -d --network {name of created network} {builded image name/ID}
+cd /etc/nginx/conf.d/default.conf									                            	:nginx server block path
+
+nano default.conf 													                                  	:reverse proxy IP:we add the python container ip into nginx config 
+nano ngixdokcerfile 
+
+docker build -t {name of image} -f {docker file name}
+docker run -d -p80:80 --neteork {name of created network} {builded image name/ID}
