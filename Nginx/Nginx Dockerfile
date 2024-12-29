@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt update -y
+RUN apt install nginx -y
+RUN echo "hello....image ke chahane walo.." > /var/www/html/index.html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
