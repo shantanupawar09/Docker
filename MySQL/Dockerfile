@@ -1,0 +1,5 @@
+FROM mysql
+ENV MYSQL_ROOT_PASSWORD=Password
+ENV MYSQL_DATABASE=Database name
+EXPOSE 3306
+CMD ["mysqld"]
